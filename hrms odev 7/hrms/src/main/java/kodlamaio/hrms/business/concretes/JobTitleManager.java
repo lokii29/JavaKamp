@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import kodlamaio.hrms.business.abstracts.JobTitleService;
-import kodlamaio.hrms.core.utilities.control.abstracts.JobTitleControlS;
+import kodlamaio.hrms.business.control.abstracts.JobTitleControlService;
 import kodlamaio.hrms.core.utilities.results.Result;
 import kodlamaio.hrms.dataAccess.abstracts.JobTitleDao;
 import kodlamaio.hrms.entities.concretes.JobTitle;
@@ -14,10 +14,10 @@ import kodlamaio.hrms.entities.concretes.JobTitle;
 public class JobTitleManager implements JobTitleService {
 
 	private JobTitleDao jobTitleDao;
-	private JobTitleControlS jobTitleControl;
+	private JobTitleControlService jobTitleControl;
 	
 	@Autowired
-	public JobTitleManager(JobTitleDao jobTitleDao,JobTitleControlS jobTitleControl) {
+	public JobTitleManager(JobTitleDao jobTitleDao,JobTitleControlService jobTitleControl) {
 		super();
 		this.jobTitleDao = jobTitleDao;
 		this.jobTitleControl=jobTitleControl;
